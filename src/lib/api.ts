@@ -1,6 +1,6 @@
 // Mock API for room data
 
-interface Room {
+export interface Room {
   id: string;
   name: string;
   description: string;
