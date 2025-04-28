@@ -71,22 +71,20 @@ const NavigationLoader = () => {
               </div>
             </div>
             
-            <div className="flex flex-col items-center">
-              <motion.div
-                initial={{ width: 0 }}
-                animate={{ width: "60px" }}
-                transition={{ 
-                  duration: 0.8,
-                  ease: "easeInOut", 
-                  repeat: Infinity, 
-                  repeatType: "reverse" 
-                }}
-                className="h-0.5 bg-accent-500 mb-2"
-              />
-              <p className="text-neutral-600 text-sm tracking-wider uppercase font-light">
-                Loading Experience
-              </p>
-            </div>
+            <motion.div
+              initial={{ width: 0 }}
+              animate={{ width: "60px" }}
+              transition={{ 
+                duration: 0.8,
+                ease: "easeInOut", 
+                repeat: Infinity, 
+                repeatType: "reverse" 
+              }}
+              className="h-0.5 bg-accent-500 mb-2"
+            />
+            <p className="text-neutral-600 text-sm tracking-wider uppercase font-light">
+              Loading Experience
+            </p>
           </motion.div>
         </motion.div>
       )}

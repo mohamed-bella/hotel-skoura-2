@@ -28,6 +28,7 @@ import { HiOutlineCalendar, HiOutlineUser } from 'react-icons/hi'
 
 import { getRoomDetails } from '@/lib/api'
 import { navigateWithLoading } from '@/lib/navigation'
+import SEO from '@/components/SEO'
 
 // Higher quality room images
 const roomGalleryImages = {
@@ -150,6 +151,13 @@ const RoomDetailPage = () => {
 
   return (
     <div className="bg-neutral-50">
+      {/* SEO with structured data for this specific room */}
+      <SEO 
+        pageType="room" 
+        roomName={room.name} 
+        roomPrice={room.price.toString()} 
+      />
+      
       {/* Spacer div to push content below fixed header */}
       <div className="h-24"></div>
       

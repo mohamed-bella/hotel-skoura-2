@@ -17,6 +17,7 @@ import {
   HiOutlineMail,
   HiOutlineLocationMarker
 } from 'react-icons/hi'
+import SEO from '@/components/SEO'
 
 export default function RoomsPage() {
   const [rooms, setRooms] = useState<Room[]>([])
@@ -125,6 +126,9 @@ export default function RoomsPage() {
   
   return (
     <div className="bg-neutral-50 min-h-screen">
+      {/* SEO Component */}
+      <SEO pageType="home" />
+      
       {/* Spacer div to push content below fixed header */}
       <div className="h-24"></div>
       

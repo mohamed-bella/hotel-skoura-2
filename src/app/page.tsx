@@ -11,6 +11,7 @@ import AboutSection from '@/components/home/AboutSection'
 import GallerySection from '@/components/home/GallerySection'
 import TestimonialsSection from '@/components/home/TestimonialsSection'
 import ContactSection from '@/components/home/ContactSection'
+import SEO from '@/components/SEO'
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false)
@@ -25,6 +26,8 @@ export default function Home() {
       animate={{ opacity: isVisible ? 1 : 0 }}
       transition={{ duration: 0.5 }}
     >
+      <SEO pageType="home" />
+      
       <HeroSection />
       <RoomTypeSection />
       <AmenitiesSection />
