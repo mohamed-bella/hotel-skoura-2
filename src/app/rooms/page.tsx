@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 import { useSearchParams } from 'next/navigation'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
-import { getAllRooms } from '@/lib/api'
+import { getAllRooms, Room } from '@/lib/api'
 import { 
   HiOutlineUser, 
   HiOutlineCalendar, 
@@ -19,7 +19,7 @@ import {
 } from 'react-icons/hi'
 
 export default function RoomsPage() {
-  const [rooms, setRooms] = useState([])
+  const [rooms, setRooms] = useState<Room[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const [selectedRoom, setSelectedRoom] = useState('')
   const [checkInDate, setCheckInDate] = useState(null)
