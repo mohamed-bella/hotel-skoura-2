@@ -4,6 +4,7 @@ import './globals.css'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import NavigationLoader from '@/components/layout/NavigationLoader'
+import InitialLoader from '@/components/layout/InitialLoader'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -42,6 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={montserrat.variable}>
       <body className="font-sans text-neutral-800 bg-neutral-50">
+        <InitialLoader />
         <Header />
         <NavigationLoader />
         <main>{children}</main>

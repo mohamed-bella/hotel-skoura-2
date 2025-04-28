@@ -43,17 +43,50 @@ const NavigationLoader = () => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
-          className="fixed inset-0 z-[999] flex items-center justify-center bg-black/50 backdrop-blur-sm"
+          className="fixed inset-0 z-[999] flex items-center justify-center bg-white/90 backdrop-blur-sm"
         >
           <motion.div 
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.9, opacity: 0 }}
-            transition={{ duration: 0.25, delay: 0.1 }}
-            className="bg-white rounded-lg shadow-xl p-7 flex flex-col items-center"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 10 }}
+            transition={{ duration: 0.3, delay: 0.1 }}
+            className="flex flex-col items-center"
           >
-            <div className="w-16 h-16 border-4 border-t-accent-500 border-r-accent-500/60 border-b-accent-500/40 border-l-accent-500/20 rounded-full animate-spin mb-4"></div>
-            <p className="text-neutral-600 font-medium">Loading experience...</p>
+            {/* Premium minimalist loading animation */}
+            <div className="relative mb-6">
+              <div className="w-16 h-16 relative">
+                <div className="absolute inset-0 rounded-full border-2 border-neutral-200"></div>
+                <motion.div 
+                  className="absolute inset-0 rounded-full border-2 border-t-accent-500 border-r-transparent border-b-transparent border-l-transparent"
+                  animate={{ rotate: 360 }}
+                  transition={{ 
+                    duration: 1, 
+                    ease: "linear", 
+                    repeat: Infinity 
+                  }}
+                ></motion.div>
+              </div>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-1.5 h-1.5 bg-accent-500 rounded-full"></div>
+              </div>
+            </div>
+            
+            <div className="flex flex-col items-center">
+              <motion.div
+                initial={{ width: 0 }}
+                animate={{ width: "60px" }}
+                transition={{ 
+                  duration: 0.8,
+                  ease: "easeInOut", 
+                  repeat: Infinity, 
+                  repeatType: "reverse" 
+                }}
+                className="h-0.5 bg-accent-500 mb-2"
+              />
+              <p className="text-neutral-600 text-sm tracking-wider uppercase font-light">
+                Loading Experience
+              </p>
+            </div>
           </motion.div>
         </motion.div>
       )}
