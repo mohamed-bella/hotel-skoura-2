@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   title: 'Bassatine Skoura | Luxury Hotel in Morocco',
   description: 'Experience luxury and comfort at Bassatine Skoura, a premium hotel in Ouarzazate, Morocco. Enjoy our elegant suites, exceptional service, and authentic Moroccan hospitality.',
   keywords: 'luxury hotel, morocco hotel, skoura, ouarzazate, premium accommodation, desert retreat',
+  metadataBase: new URL('https://bassatineskoura.com'),
   openGraph: {
     title: 'Bassatine Skoura | Luxury Hotel in Morocco',
     description: 'Experience luxury and comfort at Bassatine Skoura, a premium hotel in Ouarzazate, Morocco.',

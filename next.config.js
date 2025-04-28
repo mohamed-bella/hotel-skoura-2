@@ -1,16 +1,26 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['images.pexels.com', 'cdn.jsdelivr.net', 'images.unsplash.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.pexels.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.jsdelivr.net',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+    ],
   },
   swcMinify: true,
   compiler: {
     styledComponents: true,
   },
-  experimental: {
-    forceSwcTransforms: true,
-    esmExternals: false
-  }
+  experimental: {}
 }
 
 module.exports = nextConfig

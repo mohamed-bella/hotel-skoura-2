@@ -38,7 +38,7 @@ const roomTypes = [
     name: 'ROYAL KASBAH SUITE',
     nameArabic: 'الجناح الملكي القصبة',
     description: 'Our most exclusive accommodation featuring authentic Moroccan architecture and exquisite craftsmanship.',
-    image: 'https://images.pexels.com/photos/6446607/pexels-photo-6446607.jpeg',
+    image: 'https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     capacity: 4,
     beds: 2,
     price: 980,
