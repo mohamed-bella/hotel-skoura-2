@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" fill="none">
+  <rect x="20" y="20" width="160" height="40" fill="#121212"/>
+  <text x="100" y="40" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">FORBES</text>
+  <text x="100" y="55" font-family="Arial, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">FIVE-STAR AWARD</text>
+  <path d="M60 34L63 40L70 41L65 46L66 53L60 50L54 53L55 46L50 41L57 40L60 34Z" fill="#C9A44F"/>
+  <path d="M75 34L78 40L85 41L80 46L81 53L75 50L69 53L70 46L65 41L72 40L75 34Z" fill="#C9A44F"/>
+  <path d="M90 34L93 40L100 41L95 46L96 53L90 50L84 53L85 46L80 41L87 40L90 34Z" fill="#C9A44F"/>
+  <path d="M105 34L108 40L115 41L110 46L111 53L105 50L99 53L100 46L95 41L102 40L105 34Z" fill="#C9A44F"/>
+  <path d="M120 34L123 40L130 41L125 46L126 53L120 50L114 53L115 46L110 41L117 40L120 34Z" fill="#C9A44F"/>
+</svg> 

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" fill="none">
+  <path d="M20 20h160v40H20z" fill="#1A1A1A"/>
+  <path d="M40 30h120" stroke="#DFB05A" stroke-width="1"/>
+  <path d="M40 50h120" stroke="#DFB05A" stroke-width="1"/>
+  <text x="100" y="38" font-family="Georgia, serif" font-size="12" fill="#FFFFFF" text-anchor="middle">CONDÉ NAST TRAVELLER</text>
+  <text x="100" y="48" font-family="Georgia, serif" font-size="14" font-weight="bold" fill="#DFB05A" text-anchor="middle">GOLD LIST</text>
+  <path d="M30 25L35 35L30 45L25 35L30 25Z" fill="#DFB05A"/>
+  <path d="M170 25L175 35L170 45L165 35L170 25Z" fill="#DFB05A"/>
+</svg> 

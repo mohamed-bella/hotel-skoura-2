@@ -1,0 +1,236 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply text-neutral-900 font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-light uppercase tracking-wide;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl leading-tight;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+
+  h5 {
+    @apply text-lg md:text-xl;
+  }
+
+  h6 {
+    @apply text-base md:text-lg;
+  }
+
+  p {
+    @apply leading-relaxed font-light;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-6 md:px-10 lg:px-12 mx-auto max-w-7xl;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center text-center no-underline transition-all duration-300 uppercase tracking-wider text-sm font-light;
+  }
+
+  .btn-primary {
+    @apply btn bg-transparent border-b border-accent-500 text-neutral-900 hover:bg-neutral-50 px-8 py-4;
+  }
+
+  .btn-secondary {
+    @apply btn bg-transparent border-b border-white text-white hover:bg-white/10 px-8 py-4;
+  }
+
+  .btn-accent {
+    @apply btn bg-accent-500 text-white hover:bg-accent-600 px-8 py-4;
+  }
+
+  .btn-outline {
+    @apply btn border border-neutral-200 text-neutral-800 hover:border-accent-500 px-8 py-4;
+  }
+
+  .btn-ghost {
+    @apply btn text-neutral-800 hover:text-accent-500 px-8 py-4;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-sans uppercase font-light mb-6 tracking-wide;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-neutral-600 font-light mb-10 max-w-2xl leading-relaxed;
+  }
+
+  .section-header {
+    @apply mb-6;
+  }
+  
+  .section-label {
+    @apply text-accent-500 uppercase tracking-[0.2em] text-sm font-light mb-2;
+  }
+  
+  .section-divider {
+    @apply h-px w-12 bg-accent-500;
+  }
+
+  .image-overlay-bottom {
+    @apply absolute inset-0 bg-gradient-to-t from-black/60 to-transparent;
+  }
+
+  .image-overlay-top {
+    @apply absolute inset-0 bg-gradient-to-b from-black/60 to-transparent;
+  }
+
+  .moroccan-pattern {
+    @apply bg-neutral-900;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54.627 0l.83.828-1.415 1.415L51.8 0h2.827zM5.373 0l-.83.828L5.96 2.243 8.2 0H5.374zM48.97 0l3.657 3.657-1.414 1.414L46.143 0h2.828zM11.03 0L7.372 3.657l1.415 1.414L13.857 0H11.03zm32.284 0L49.8 6.485 48.384 7.9l-7.9-7.9h2.83zm-24.596 0L12.143 6.485l1.415 1.414 7.9-7.9h-2.83zm16.727 0L41.97 6.485l-1.414 1.414-7.9-7.9h2.828zm-8.86 0L18.016 6.485l1.414 1.414 7.9-7.9h-2.83zm-15.056 0L8.256 6.485 9.67 7.9l-7.9-7.9h2.83zm32.284 0L51.2 6.485 49.784 7.9l-7.9-7.9h2.83zm-48.55 8.586L0 10.414l.828.828L2.242 8.2 5.9 11.857l1.414-1.414L0 3.13v2.83zm0 5.656L0 16.07l.828.83L2.242 13.8l3.657 3.66 1.414-1.415L0 8.787v2.827zm0 5.657L0 21.728l.828.828L2.242 19.4l3.657 3.657 1.414-1.414L0 14.444v2.827zm0 5.657L0 27.384l.828.83L2.242 25l3.657 3.657 1.414-1.414L0 20.1v2.828zm0 5.657L0 33.043l.828.828 1.414-1.414L5.9 36.114l1.414-1.414L0 25.76v2.83zm0 5.657L0 38.7l.828.828 1.414-1.414L5.9 41.77l1.414-1.414L0 31.417V34.246zm0 5.657L0 44.357l.828.828L2.242 41.8l3.657 3.657 1.414-1.414L0 37.073v2.83zm0 5.657L0 50.014l.828.828 1.414-1.414L5.9 53.084l1.414-1.414L0 42.73v2.828zm0 5.657L0 55.67l.828.83 1.414-1.415 3.657 3.66 1.414-1.415L0 48.39v2.83zm0 5.656L0 61.328l.828.83 1.414-1.415 3.657 3.66 1.414-1.414L0 54.047v2.83zM5.373 60L8.2 57.172l-1.415-1.415L3.957 60h1.416zm5.657 0l3.656-3.657-1.414-1.414L9.614 60h1.416zm5.657 0l3.657-3.657-1.414-1.414L15.27 60h1.415zm5.657 0l3.657-3.657-1.414-1.414L20.93 60h1.414zm5.656 0l3.657-3.657-1.414-1.414L26.585 60H28zm5.657 0l3.657-3.657-1.414-1.414L32.242 60h1.414zm5.657 0l3.657-3.657-1.414-1.414L37.9 60h1.414zm5.656 0l3.657-3.657-1.414-1.414L43.557 60h1.415zm5.657 0l3.657-3.657-1.414-1.414L49.214 60h1.414zm5.656 0l3.657-3.657-1.414-1.414L54.87 60h1.415zm5.657 0l1.414-1.414-1.414-1.414L55.9 60h2.828z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+  }
+
+  .moroccan-arch {
+    position: relative;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .gold-gradient {
+    background: linear-gradient(90deg, rgba(217,175,98,1) 0%, rgba(229,205,163,1) 50%, rgba(217,175,98,1) 100%);
+  }
+
+  .shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shimmer::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(255, 255, 255, 0.3) 50%,
+      transparent 100%
+    );
+    transform: rotate(30deg);
+    animation: shimmer 3s infinite;
+  }
+
+  @keyframes shimmer {
+    0% { transform: translateX(-100%) rotate(30deg); }
+    100% { transform: translateX(100%) rotate(30deg); }
+  }
+
+  .fade-in {
+    animation: fadeIn 0.5s ease-in-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .shadow-elegant {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .shadow-medium {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  }
+
+  .room-card {
+    @apply overflow-hidden bg-white;
+  }
+
+  .room-card-img {
+    @apply relative aspect-[4/3] overflow-hidden;
+  }
+
+  .form-control {
+    @apply w-full border border-neutral-300 p-4 text-neutral-600 focus:outline-none focus:border-accent-500 bg-transparent font-light;
+  }
+
+  .form-label {
+    @apply block uppercase text-xs tracking-[0.15em] text-neutral-600 mb-2;
+  }
+
+  .form-group {
+    @apply mb-4;
+  }
+
+  .section-heading {
+    @apply mb-16 text-center;
+  }
+
+  .title-accent {
+    @apply text-accent-500;
+  }
+}
+
+.swiper-pagination-bullet {
+  @apply bg-white/50 opacity-100 w-2 h-2;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-accent-500 w-8 transition-all duration-300;
+}
+
+.hero-gradient {
+  @apply bg-gradient-to-b from-black/40 via-transparent to-black/60;
+}
+
+.bg-pattern-light {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54.627 0l.83.828-1.415 1.415L51.8 0h2.827zM5.373 0l-.83.828L5.96 2.243 8.2 0H5.374zM48.97 0l3.657 3.657-1.414 1.414L46.143 0h2.828zM11.03 0L7.372 3.657l1.415 1.414L13.857 0H11.03zm32.284 0L49.8 6.485 48.384 7.9l-7.9-7.9h2.83zm-24.596 0L12.143 6.485l1.415 1.414 7.9-7.9h-2.83zm16.727 0L41.97 6.485l-1.414 1.414-7.9-7.9h2.828zm-8.86 0L18.016 6.485l1.414 1.414 7.9-7.9h-2.83zm-15.056 0L8.256 6.485 9.67 7.9l-7.9-7.9h2.83zm32.284 0L51.2 6.485 49.784 7.9l-7.9-7.9h2.83zm-48.55 8.586L0 10.414l.828.828L2.242 8.2 5.9 11.857l1.414-1.414L0 3.13v2.83zm0 5.656L0 16.07l.828.83L2.242 13.8l3.657 3.66 1.414-1.415L0 8.787v2.827zm0 5.657L0 21.728l.828.828L2.242 19.4l3.657 3.657 1.414-1.414L0 14.444v2.827zm0 5.657L0 27.384l.828.83L2.242 25l3.657 3.657 1.414-1.414L0 20.1v2.828zm0 5.657L0 33.043l.828.828 1.414-1.414L5.9 36.114l1.414-1.414L0 25.76v2.83zm0 5.657L0 38.7l.828.828 1.414-1.414L5.9 41.77l1.414-1.414L0 31.417V34.246zm0 5.657L0 44.357l.828.828L2.242 41.8l3.657 3.657 1.414-1.414L0 37.073v2.83zm0 5.657L0 50.014l.828.828 1.414-1.414L5.9 53.084l1.414-1.414L0 42.73v2.828zm0 5.657L0 55.67l.828.83 1.414-1.415 3.657 3.66 1.414-1.415L0 48.39v2.83zm0 5.656L0 61.328l.828.83 1.414-1.415 3.657 3.66 1.414-1.414L0 54.047v2.83zM5.373 60L8.2 57.172l-1.415-1.415L3.957 60h1.416zm5.657 0l3.656-3.657-1.414-1.414L9.614 60h1.416zm5.657 0l3.657-3.657-1.414-1.414L15.27 60h1.415zm5.657 0l3.657-3.657-1.414-1.414L20.93 60h1.414zm5.656 0l3.657-3.657-1.414-1.414L26.585 60H28zm5.657 0l3.657-3.657-1.414-1.414L32.242 60h1.414zm5.657 0l3.657-3.657-1.414-1.414L37.9 60h1.414zm5.656 0l3.657-3.657-1.414-1.414L43.557 60h1.415zm5.657 0l3.657-3.657-1.414-1.414L49.214 60h1.414zm5.656 0l3.657-3.657-1.414-1.414L54.87 60h1.415zm5.657 0l1.414-1.414-1.414-1.414L55.9 60h2.828z' fill='%23000000' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.calendar-wrapper .react-datepicker {
+  @apply font-sans border-neutral-200 shadow-elegant;
+}
+
+.calendar-wrapper .react-datepicker__header {
+  @apply bg-neutral-50 border-neutral-200;
+}
+
+.calendar-wrapper .react-datepicker__day--selected {
+  @apply bg-accent-500 hover:bg-accent-600;
+}
+
+.calendar-wrapper .react-datepicker__day--in-range {
+  @apply bg-accent-500/20;
+}
+
+.calendar-wrapper .react-datepicker__day--in-selecting-range {
+  @apply bg-accent-500/10;
+}
+
+.calendar-wrapper .react-datepicker__current-month {
+  @apply text-sm font-medium uppercase tracking-wider;
+}

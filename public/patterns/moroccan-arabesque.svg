@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <defs>
+    <pattern id="moroccanArabesque" patternUnits="userSpaceOnUse" width="60" height="60">
+      <!-- Base -->
+      <path d="M0 0h60v60H0z" fill="none"/>
+      
+      <!-- Arch patterns -->
+      <path d="M0 30a30 30 0 0 1 60 0" stroke="#DFB05A" stroke-width="0.5" fill="none"/>
+      <path d="M0 30a15 15 0 0 0 30 0a15 15 0 0 0 30 0" stroke="#DFB05A" stroke-width="0.5" fill="none"/>
+      <path d="M30 0a30 30 0 0 1 0 60" stroke="#DFB05A" stroke-width="0.5" fill="none"/>
+      <path d="M30 0a15 15 0 0 0 0 30a15 15 0 0 0 0 30" stroke="#DFB05A" stroke-width="0.5" fill="none"/>
+      
+      <!-- Decorative elements -->
+      <circle cx="30" cy="30" r="2" stroke="#DFB05A" stroke-width="0.5" fill="none"/>
+      <circle cx="30" cy="30" r="5" stroke="#DFB05A" stroke-width="0.5" fill="none"/>
+      <circle cx="30" cy="30" r="10" stroke="#DFB05A" stroke-width="0.5" fill="none"/>
+      
+      <!-- Corner elements -->
+      <path d="M5 5a10 10 0 0 1 10 10" stroke="#DFB05A" stroke-width="0.5" fill="none"/>
+      <path d="M55 5a10 10 0 0 0 -10 10" stroke="#DFB05A" stroke-width="0.5" fill="none"/>
+      <path d="M5 55a10 10 0 0 0 10 -10" stroke="#DFB05A" stroke-width="0.5" fill="none"/>
+      <path d="M55 55a10 10 0 0 1 -10 -10" stroke="#DFB05A" stroke-width="0.5" fill="none"/>
+    </pattern>
+  </defs>
+  <rect width="100" height="100" fill="url(#moroccanArabesque)"/>
+</svg> 
