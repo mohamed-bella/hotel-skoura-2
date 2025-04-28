@@ -1,0 +1,14 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://bassatineskoura.com/sitemap.xml
+
+# Disallow crawling of admin or sensitive areas
+User-agent: *
+Disallow: /api/
+Disallow: /admin/
+Disallow: /internal/
+Disallow: /.next/
+Disallow: /_next/ 
