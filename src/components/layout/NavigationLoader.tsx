@@ -3,6 +3,13 @@ import { useState, useEffect } from 'react'
 import { usePathname, useSearchParams } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 
+// Define the global window interface outside the component
+declare global {
+  interface Window {
+    startNavigation?: () => void;
+  }
+}
+
 const NavigationLoader = () => {
   const pathname = usePathname()
   const searchParams = useSearchParams()
@@ -13,8 +20,20 @@ const NavigationLoader = () => {
     setIsLoading(false)
   }, [pathname, searchParams])
   
-  // Export a function to trigger loading state
-  window.startNavigation = () => setIsLoading(true)
+  // Export a function to trigger loading state - safely for SSR
+  useEffect(() => {
+    // Only run this in browser, not during server-side rendering
+    if (typeof window !== 'undefined') {
+      window.startNavigation = () => setIsLoading(true)
+    }
+    
+    // Clean up when component unmounts
+    return () => {
+      if (typeof window !== 'undefined') {
+        window.startNavigation = undefined
+      }
+    }
+  }, []) // Empty dependency array means this runs once on mount
   
   return (
     <AnimatePresence>
@@ -42,11 +61,4 @@ const NavigationLoader = () => {
   )
 }
 
-export default NavigationLoader
-
-// Add global type for window.startNavigation
-declare global {
-  interface Window {
-    startNavigation: () => void;
-  }
-} 
+export default NavigationLoader 

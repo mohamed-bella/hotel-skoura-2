@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, FormEvent } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
@@ -22,8 +22,8 @@ export default function RoomsPage() {
   const [rooms, setRooms] = useState<Room[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const [selectedRoom, setSelectedRoom] = useState('')
-  const [checkInDate, setCheckInDate] = useState(null)
-  const [checkOutDate, setCheckOutDate] = useState(null)
+  const [checkInDate, setCheckInDate] = useState<Date | null>(null)
+  const [checkOutDate, setCheckOutDate] = useState<Date | null>(null)
   const [adults, setAdults] = useState(2)
   const [children, setChildren] = useState(0)
   const [name, setName] = useState('')
@@ -55,7 +55,7 @@ export default function RoomsPage() {
     fetchRooms()
   }, [searchParams])
   
-  const handleCheckInChange = (date) => {
+  const handleCheckInChange = (date: Date | null) => {
     setCheckInDate(date)
     if (date && (!checkOutDate || checkOutDate <= date)) {
       const nextDay = new Date(date)
@@ -64,7 +64,7 @@ export default function RoomsPage() {
     }
   }
   
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
     

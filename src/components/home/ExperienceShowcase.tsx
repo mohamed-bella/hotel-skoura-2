@@ -68,7 +68,7 @@ const ExperienceShowcase = () => {
   }
 
   const variants = {
-    enter: (direction) => ({
+    enter: (direction: number) => ({
       x: direction > 0 ? 500 : -500,
       opacity: 0,
     }),
@@ -76,7 +76,7 @@ const ExperienceShowcase = () => {
       x: 0,
       opacity: 1,
     },
-    exit: (direction) => ({
+    exit: (direction: number) => ({
       x: direction < 0 ? 500 : -500,
       opacity: 0,
     }),
